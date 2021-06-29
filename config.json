@@ -1,0 +1,81 @@
+{
+  "layout": {
+    "title": "Форма\nдля полёта на Марс \uD83D\uDE80",
+    "inputs": [
+      {
+        "label": "Фамилия",
+        "type": "text",
+        "id": "surname",
+        "placeholder": "Введите фамилию"
+      },
+      {
+        "label": "Имя",
+        "type": "text",
+        "id": "name",
+        "placeholder": "Введите имя"
+      },
+      {
+        "label": "Отчество",
+        "type": "text",
+        "id": "lastname",
+        "placeholder": "Введите отчество"
+      },
+      {
+        "label": "Фамилия латиницей",
+        "type": "text",
+        "id": "lat_surname",
+        "placeholder": "Введите фамилию латиницей"
+      },
+      {
+        "label": "Имя латиницей",
+        "type": "text",
+        "id": "lat_name",
+        "placeholder": "Введите имя латиницей"
+      },
+      {
+        "label": "День рождения",
+        "type": "date",
+        "id": "birthday",
+        "placeholder": ""
+      }
+    ],
+    "radios": [
+      {
+        "type": "radio",
+        "name": "marriage",
+        "value": "married",
+        "text": "Женат"
+      },
+      {
+        "type": "radio",
+        "name": "marriage",
+        "value": "notmarried",
+        "text": "Не женат"
+      }
+    ],
+    "hr": "",
+    "subtitle": "Контактные данные",
+    "_inputs": [
+      {
+        "label": "Номер телефона",
+        "type": "tel",
+        "id": "tel",
+        "placeholder": "Введите номер телефона"
+      },
+      {
+        "label": "Электронная почта",
+        "type": "email",
+        "id": "email",
+        "placeholder": "Введите электронную почту"
+      }
+    ],
+    "submit": {
+      "url": "www.example.com",
+      "text": "Отправить"
+    }
+  },
+  "settings": {
+    "generateFullHtml": true,
+    "addonAnimated": true
+  }
+}

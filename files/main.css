@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    background-color: #7D7D7D;
+    padding-top: 10vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    z-index: 100;
+    margin: 0 auto;
+}
+
+p, a, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+label, input {
+    font-family: SF Pro Text, serif;
+}
+
+label {
+    color: #6F7985;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+input {
+    height: 40px;
+    border: 1px solid #D3D9DE;
+    border-radius: 6px;
+    background-color: #F7F8FA;
+    font-size: 15px;
+    padding-left: 13px;
+    margin-bottom: 20px;
+}
+
+
+.animation-block {
+    width: 50%;
+}
+
+.animation-block * {
+    position: absolute;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    padding-top: 52px;
+    padding-bottom: 52px;
+    font-family: VK Sans Display, serif;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.form h1 {
+    width: 500px;
+    text-align: center;
+    margin-left: 61px;
+    margin-bottom: 30px;
+}
+
+.info-block {
+    width: 50%;
+}
+
+.info-block .wrapper {
+    margin-left: 45px;
+    display: block;
+    width: 500px;
+}
+
+.wrapper * {
+    width: 100%;
+    display: block;
+}
+
+.wrapper_radio {
+    width: 500px;
+    margin: 0;
+    display: flex;
+}
+
+.wrapper_radio input {
+    height: 30px;
+    width: 30px;
+    margin: 0px 15px 0px 0px;
+    padding: 0;
+}
+
+
+.block-radio {
+    width: 140px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.button {
+    margin: 40px auto 0;
+    width: 258px;
+    height: 40px;
+}
+
+button {
+    height: 100%;
+    background-color: #4BB34B;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+
+.redButton {
+    color: #fff !important;
+    background-color: #FF3347 !important;
+}
