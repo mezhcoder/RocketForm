@@ -112,7 +112,7 @@ fs.writeFileSync("result.html", data); //создание файла result.html
     }
   },
   "settings": {
-    "addonAnimated": true //подключить анимацию к форме (справа)
+    "addonAnimated": true
   }
 }
 ```
