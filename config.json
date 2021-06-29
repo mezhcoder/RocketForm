@@ -71,11 +71,10 @@
     ],
     "submit": {
       "url": "www.example.com",
-      "text": "Отправить"
+      "text": "Полететь на марс"
     }
   },
   "settings": {
-    "generateFullHtml": true,
     "addonAnimated": true
   }
 }
