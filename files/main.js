@@ -2,8 +2,8 @@ async function loadSvgElements() {
     let data = {};
     let promise = new Promise((resolve, reject) => {
 
-        if (document.querySelector("object svg") === undefined) {
-            document.querySelector("object svg").addEventListener("load", function () {
+        if (document.querySelector("object svg") !== null) {
+                document.querySelector("object svg").addEventListener("load", function () {
                 this.querySelectorAll("g").forEach(g => {
                     data[g.getAttribute("id")] = g;
                 })
