@@ -22,13 +22,13 @@
 В данном примере для импорта использовался Node Core
 
 ```js
-const { generate } = require('./generator')
+const { generate } = require('./generator') //подключение библиотеки
 
-let json = JSON.parse(require('fs').readFileSync('config.json').toString());
-let data = generate(json);
+let json = JSON.parse(require('fs').readFileSync('config.json').toString()); //подключение json 
+let data = generate(json); //генерация формы. На вывод приходит строка с готовой версткой 
 
 fs = require('fs');
-fs.writeFileSync("result.html", data);
+fs.writeFileSync("result.html", data); //создание файла result.html и заполнение готовой версткой
 ```
 
 # Настройка
@@ -112,8 +112,7 @@ fs.writeFileSync("result.html", data);
     }
   },
   "settings": {
-    "generateFullHtml": true,
-    "addonAnimated": true
+    "addonAnimated": true //подключить анимацию к форме (справа)
   }
 }
 ```
