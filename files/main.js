@@ -1,12 +1,18 @@
 async function loadSvgElements() {
     let data = {};
     let promise = new Promise((resolve, reject) => {
-        document.querySelector("object svg").addEventListener("load", function () {
-            this.querySelectorAll("g").forEach(g => {
-                data[g.getAttribute("id")] = g;
-            })
-            resolve(data);
-        });
+
+        if (document.querySelector("object svg") === undefined) {
+            document.querySelector("object svg").addEventListener("load", function () {
+                this.querySelectorAll("g").forEach(g => {
+                    data[g.getAttribute("id")] = g;
+                })
+                resolve(data);
+            });
+        } else {
+            resolve(null);
+        }
+
     });
     return await promise;
 }
@@ -53,7 +59,9 @@ loadSvgElements().then(data => {
                 button.classList.remove("redButton");
                 button.textContent = saveText;
             }
-            drawAnimation();
+            if (data != null) {
+                drawAnimation();
+            }
         })
 
 

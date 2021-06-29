@@ -62,7 +62,7 @@ function generate(json) {
     let startHtml = '<header class="header">\n' +
         '   <div class="container">\n' +
         '      <div class="form">\n' +
-        '         <form action="www.example.com">\n' +
+        `         <form action="${json["layout"]["submit"]["url"]}">\n` +
         '            <div class="info-block">\n';
 
     let mediumHtml = "";
@@ -91,9 +91,10 @@ function generate(json) {
         }
     }
 
+    let css = require('fs').readFileSync('files/main.css').toString();
     let html_addonAnimated = "";
     if (json["settings"]["addonAnimated"]) {
-        let addonAnimated = require('fs').readFileSync('files/Group2.svg').toString();
+        let addonAnimated = require('fs').readFileSync('files/animation.svg').toString();
         html_addonAnimated += '  <object\n' +
             '                    type="image/svg+xml"\n' +
             '                    data="base64"\n' +
@@ -101,6 +102,10 @@ function generate(json) {
             '                    width="474px">\n' +
             `${addonAnimated}\n` +
             '</object>\n'
+    } else {
+        css += ".form {\n" +
+            "    justify-content: center;\n" +
+            "}"
     }
 
     let endHtml = '            </div>\n' +
@@ -111,7 +116,7 @@ function generate(json) {
         '</header>'
 
 
-    let css = require('fs').readFileSync('files/main.css').toString();
+
     let scriptJS = require('fs').readFileSync('files/main.js').toString();
     let resultHtml = '<!DOCTYPE html>\n' +
         '<html lang="en">\n' +

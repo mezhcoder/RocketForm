@@ -125,6 +125,13 @@ button {
     border-radius: 4px;
 }
 
+button:hover {
+    background-color: #FAEBEB;
+    color: #000;
+    transition: top 3s ease-out 3s;
+    border: 1px solid #D3D9DE;
+}
+
 
 .redButton {
     color: #fff !important;

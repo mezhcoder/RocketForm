@@ -61,7 +61,7 @@
               </div>
               <div class="wrapper">
                   <div class="button">
-                       <button>Отправить</button>
+                       <button>Полететь на марс</button>
                   </div>
                </div>
             </div>
@@ -376,6 +376,13 @@ button {
     border-radius: 4px;
 }
 
+button:hover {
+    background-color: #FAEBEB;
+    color: #000;
+    transition: top 3s ease-out 3s;
+    border: 1px solid #D3D9DE;
+}
+
 
 .redButton {
     color: #fff !important;
@@ -386,12 +393,18 @@ button {
 async function loadSvgElements() {
     let data = {};
     let promise = new Promise((resolve, reject) => {
-        document.querySelector("object svg").addEventListener("load", function () {
-            this.querySelectorAll("g").forEach(g => {
-                data[g.getAttribute("id")] = g;
-            })
-            resolve(data);
-        });
+
+        if (document.querySelector("object svg") === undefined) {
+            document.querySelector("object svg").addEventListener("load", function () {
+                this.querySelectorAll("g").forEach(g => {
+                    data[g.getAttribute("id")] = g;
+                })
+                resolve(data);
+            });
+        } else {
+            resolve(null);
+        }
+
     });
     return await promise;
 }
@@ -438,7 +451,9 @@ loadSvgElements().then(data => {
                 button.classList.remove("redButton");
                 button.textContent = saveText;
             }
-            drawAnimation();
+            if (data != null) {
+                drawAnimation();
+            }
         })
 
 
